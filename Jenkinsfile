@@ -19,7 +19,7 @@ pipeline {
        
         stage('terraform init') {
             steps {
-                sh 'sudo /usr/local/bin/terraform init ./jenkins'
+                sh '/usr/local/bin/terraform init /var/lib/jenkins/workspace/aws_terraform_new/terraform_jenkins_sample'
             }
         }
         stage('terraform ended') {
