@@ -9,7 +9,7 @@ pipeline {
         stage('terraform started') {
             steps {
                 sh 'echo "Started...!" '
-		echo $JOB_NAME
+		
             }
         }
         stage('git clone') {
