@@ -9,6 +9,7 @@ pipeline {
         stage('terraform started') {
             steps {
                 sh 'echo "Started...!" '
+		echo $JOB_NAME
             }
         }
         stage('git clone') {
@@ -19,6 +20,7 @@ pipeline {
        
         stage('terraform init') {
             steps {
+		sh 'cp /home/awscloudvm/cloud-examples_code/terraform_jenkins_sample/terraform.tfvars /var/lib/jenkins/workspace/aws_terraform_new/terraform_jenkins_sample'
                 sh '/usr/local/bin/terraform init /var/lib/jenkins/workspace/aws_terraform_new/terraform_jenkins_sample'
             }
         }
