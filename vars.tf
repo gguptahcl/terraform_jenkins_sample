@@ -1,7 +1,3 @@
-variable "ACCESS_KEY" {
- default=""
-}
+variable "ACCESS_KEY" {}
 
-variable "SECRET_KEY" {
-  default=""
-}
+variable "SECRET_KEY" {}
