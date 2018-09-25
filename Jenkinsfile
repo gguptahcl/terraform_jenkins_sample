@@ -26,8 +26,9 @@ sh 'sudo cp /home/awscloudvm/cloud-examples_code/terraform_jenkins_sample/terraf
         }
 	stage('terraform plan') {
             steps {
-		 sh 'sudo /usr/local/bin/terraform plan /var/lib/jenkins/workspace/aws_terraform_new/terraform_jenkins_sample'
-		 sh 'sudo /usr/local/bin/terraform apply /var/lib/jenkins/workspace/aws_terraform_new/terraform_jenkins_sample'
+		 sh 'sudo /usr/local/bin/terraform plan -out plan.txt /var/lib/jenkins/workspace/aws_terraform_new/terraform_jenkins_sample'
+		 sh 'sudo /usr/local/bin/terraform apply plan.txt /var/lib/jenkins/workspace/aws_terraform_new/terraform_jenkins_sample'
+		
             }
         }
 
