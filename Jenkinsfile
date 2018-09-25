@@ -28,6 +28,7 @@ pipeline {
         }
 	stage('terraform plan') {
             steps {
+		sh  'cd /var/lib/jenkins/workspace/aws_terraform_new/terraform_jenkins_sample'
 		 sh 'sudo /usr/local/bin/terraform plan -out plan.txt /var/lib/jenkins/workspace/aws_terraform_new/terraform_jenkins_sample'
 		 sh 'sudo /usr/local/bin/terraform apply plan.txt /var/lib/jenkins/workspace/aws_terraform_new/terraform_jenkins_sample'
             }
