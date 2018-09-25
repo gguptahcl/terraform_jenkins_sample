@@ -13,7 +13,7 @@ pipeline {
         }
         stage('git clone') {
             steps {
-                sh 'rm -r *;sudo git clone https://github.com/gguptahcl/terraform_jenkins_sample.git'
+                sh 'sudo rm -r *;sudo git clone https://github.com/gguptahcl/terraform_jenkins_sample.git'
             }
         }
        
