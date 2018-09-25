@@ -22,7 +22,7 @@ pipeline {
             steps {
 	sh 'sudo cp /home/awscloudvm/cloud-examples_code/terraform_jenkins_sample/vars.tf /var/lib/jenkins/workspace/aws_terraform_new/terraform_jenkins_sample'
 	sh 'sudo cp /home/awscloudvm/cloud-examples_code/terraform_jenkins_sample/terraform.tfvars /var/lib/jenkins/workspace/aws_terraform_new'
-          sh 'sudo /usr/local/bin/terraform init -input=false /var/lib/jenkins/workspace/aws_terraform_new'
+          sh 'sudo /usr/local/bin/terraform init -input=false /var/lib/jenkins/workspace/aws_terraform_new/terraform_jenkins_sample'
 
             }
         }
