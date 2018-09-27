@@ -11,12 +11,6 @@ pipeline {
 		
             }
         }
-        stage('git clone') {
-            steps {
-                sh 'sudo rm -r *;sudo git clone https://github.com/gguptahcl/terraform_jenkins_sample.git'
-		sh 'echo pwd'
-            }
-        }
       stage('terraform init') {
             steps {
 	          sh 'terraform init -input=false'
